@@ -169,7 +169,7 @@ public class Properties {
             @Override
             public <T> Object parseToJava(Class<T> type, Object object) {
                 if (object instanceof Collection) {
-                    return new LinkedHashSet<>((Collection<?>) object);
+                    return new LinkedHashSet<>((Collection<String>) object);
                 }
                 return object;
             }

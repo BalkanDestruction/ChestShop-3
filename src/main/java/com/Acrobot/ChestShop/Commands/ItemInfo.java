@@ -29,7 +29,7 @@ public class ItemInfo implements CommandExecutor {
                 return false;
             }
 
-            item = ((HumanEntity) sender).getItemInHand();
+            item = ((HumanEntity) sender).getInventory().getItemInMainHand();
         } else {
             ItemParseEvent parseEvent = new ItemParseEvent(StringUtil.joinArray(args));
             Bukkit.getPluginManager().callEvent(parseEvent);

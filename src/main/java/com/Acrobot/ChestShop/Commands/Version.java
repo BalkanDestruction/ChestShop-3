@@ -5,12 +5,13 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 /**
  * @author Acrobot
  */
 public class Version implements CommandExecutor {
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    public boolean onCommand(@NonNull CommandSender sender, @NonNull Command cmd, @NonNull String label, String[] args) {
         if (args.length > 0 && args[0].equals("reload")) {
             ChestShop.getPlugin().loadConfig();
 
